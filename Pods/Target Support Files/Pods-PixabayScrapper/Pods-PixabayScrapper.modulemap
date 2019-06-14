@@ -1,0 +1,6 @@
+framework module Pods_PixabayScrapper {
+  umbrella header "Pods-PixabayScrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

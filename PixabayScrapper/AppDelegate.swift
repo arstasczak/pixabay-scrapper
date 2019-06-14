@@ -12,12 +12,29 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private var appCoordinator: AppCorrdinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().barTintColor = MAINCOLOR
+        UINavigationBar.appearance().tintColor = SECNAVBARCOLOR
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white ]
+        UINavigationBar.appearance().isTranslucent = false
+
+        appCoordinator = AppCorrdinator()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+
+        appCoordinator?.rootViewControllerSwitched = { [weak self, weak appCoordinator] in
+            guard let strongSelf = self, let coordinator = appCoordinator else {return}
+            strongSelf.window?.rootViewController = coordinator.rootViewController
+            strongSelf.window?.makeKeyAndVisible()
+        }
+        
+        appCoordinator?.start()
         return true
     }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

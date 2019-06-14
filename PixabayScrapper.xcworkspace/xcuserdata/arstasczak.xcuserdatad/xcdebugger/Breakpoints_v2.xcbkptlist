@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManager.swift"
+            timestampString = "582241968.980762"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManager.swift"
+            timestampString = "582241968.980873"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PixabayScrapper.RequestManager.getPhotosForKey(query: Swift.String, closure: (Swift.Array&lt;PixabayScrapper.ScrappedImageDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManager.swift"
+                  timestampString = "582150488.4583009"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "675">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in PixabayScrapper.RequestManager.getPhotosForKey(query: Swift.String, closure: (Swift.Array&lt;PixabayScrapper.ScrappedImageDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManager.swift"
+                  timestampString = "582150488.462622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "249">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManagerCore.swift"
+            timestampString = "582152874.333896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "apiRequest(url:method:params:encoding:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PixabayScrapper.RequestManagerCore.apiRequest(url: Swift.String, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, encoding: Alamofire.ParameterEncoding, closure: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManagerCore.swift"
+                  timestampString = "582150488.473774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "422">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PixabayScrapper.RequestManagerCore.apiRequest(url: Swift.String, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, encoding: Alamofire.ParameterEncoding, closure: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManagerCore.swift"
+                  timestampString = "582150488.475381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "429">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManagerCore.swift"
+            timestampString = "582152874.333961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "apiRequest(url:method:params:encoding:closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManagerCore.swift"
+            timestampString = "582152874.33402"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "apiRequest(url:method:params:encoding:closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManager.swift"
+            timestampString = "582241968.981047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PixabayScrapper.RequestManager.getPhotosForKey(query: Swift.String, closure: (Swift.Array&lt;PixabayScrapper.ScrappedImageDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManager.swift"
+                  timestampString = "582150488.489051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "675">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in PixabayScrapper.RequestManager.getPhotosForKey(query: Swift.String, closure: (Swift.Array&lt;PixabayScrapper.ScrappedImageDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManager.swift"
+                  timestampString = "582150488.490514"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "249">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManager.swift"
+            timestampString = "582241968.981126"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Networking/RequestManagerCore.swift"
+            timestampString = "582152874.3341841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "apiRequest(url:method:params:encoding:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PixabayScrapper.RequestManagerCore.apiRequest(url: Swift.String, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, encoding: Alamofire.ParameterEncoding, closure: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManagerCore.swift"
+                  timestampString = "582150488.496822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "362">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PixabayScrapper.RequestManagerCore.apiRequest(url: Swift.String, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, encoding: Alamofire.ParameterEncoding, closure: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "PixabayScrapper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arstasczak/Desktop/PixabayScrapper/PixabayScrapper/Networking/RequestManagerCore.swift"
+                  timestampString = "582150488.498457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "157">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

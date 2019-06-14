@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Kingfisher (5.4.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SnapKit (5.0.0)
+  - SwiftLint (0.32.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.1)
+  - Kingfisher
+  - RxCocoa (~> 4)
+  - RxSwift (~> 4)
+  - SnapKit (~> 5.0.0)
+  - SwiftLint
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 14194d4118e3ef455ef91fd6879df9fa51f2cef3
+
+COCOAPODS: 1.6.1
