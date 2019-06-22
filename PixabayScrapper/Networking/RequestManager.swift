@@ -12,7 +12,7 @@ import Alamofire
 class RequestManager: RequestManagerCore {
     static let shared = RequestManager()
     
-    func getPhotosForKey(query: String, page: Int, closure: @escaping (_ scrappedImages: [ScrappedImageDto]) -> Void) {
+    func getPhotos(query: String, page: Int, closure: @escaping (_ scrappedImages: [ScrappedImageDto]) -> Void) {
         var params: [String:AnyObject] = [:]
         params["key"] = NetworkingHelper.shared.pixabayKey as AnyObject
         params["q"] = query as AnyObject
@@ -28,6 +28,25 @@ class RequestManager: RequestManagerCore {
                 }
             }
             closure(scrappedImages)
+        }
+    }
+    
+    func getVideos(query: String, page: Int, closure: @escaping (_ scrappedVideos: [ScrappedVideoDto]) -> Void) {
+        var params: [String:AnyObject] = [:]
+        params["key"] = NetworkingHelper.shared.pixabayKey as AnyObject
+        params["q"] = query as AnyObject
+        params["page"] = page as AnyObject
+        
+        let url = NetworkingHelper.shared.mainVideosURL
+        
+        apiRequest(url: url, method: .get, params: params, encoding: URLEncoding.default) { (responseJSON, success) in
+            var scrappedVideos: [ScrappedVideoDto] = []
+            if let responseJSON = responseJSON {
+                for item in responseJSON["hits"].arrayValue {
+                    scrappedVideos.append(ScrappedVideoDto(with: item))
+                }
+            }
+            closure(scrappedVideos)
         }
     }
 }

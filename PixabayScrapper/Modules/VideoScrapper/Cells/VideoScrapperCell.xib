@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="VideoScrapperCell" customModule="PixabayScrapper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SK9-DY-fxe">
+                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="92.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="92.5" id="0wt-Qt-lVA"/>
+                            <constraint firstAttribute="width" secondItem="SK9-DY-fxe" secondAttribute="height" multiplier="1:1" id="BST-EP-zn0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXI-V1-OfM">
+                        <rect key="frame" x="97.5" y="5" width="217.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloads: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zR-b9-Pqo">
+                        <rect key="frame" x="97" y="26" width="218" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upu-n0-GQh">
+                        <rect key="frame" x="97.5" y="47" width="217.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-di-dLi">
+                        <rect key="frame" x="97.5" y="68" width="217.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4Jo-di-dLi" secondAttribute="trailing" constant="5" id="17V-c9-E83"/>
+                    <constraint firstAttribute="trailing" secondItem="4zR-b9-Pqo" secondAttribute="trailing" constant="5" id="B2e-aC-nwK"/>
+                    <constraint firstItem="4zR-b9-Pqo" firstAttribute="top" secondItem="nXI-V1-OfM" secondAttribute="bottom" constant="5" id="Eqf-k9-Qi8"/>
+                    <constraint firstItem="upu-n0-GQh" firstAttribute="top" secondItem="4zR-b9-Pqo" secondAttribute="bottom" constant="5" id="UCV-43-I6j"/>
+                    <constraint firstItem="nXI-V1-OfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XWU-Ha-pag"/>
+                    <constraint firstItem="upu-n0-GQh" firstAttribute="leading" secondItem="SK9-DY-fxe" secondAttribute="trailing" constant="5" id="XYl-Pb-fff"/>
+                    <constraint firstItem="SK9-DY-fxe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="d1m-vr-Vmf"/>
+                    <constraint firstItem="4zR-b9-Pqo" firstAttribute="leading" secondItem="SK9-DY-fxe" secondAttribute="trailing" constant="4.5" id="g79-wQ-JHk"/>
+                    <constraint firstAttribute="trailing" secondItem="upu-n0-GQh" secondAttribute="trailing" constant="5" id="h6M-YS-dPG"/>
+                    <constraint firstAttribute="bottom" secondItem="SK9-DY-fxe" secondAttribute="bottom" id="olz-M7-DdQ"/>
+                    <constraint firstItem="4Jo-di-dLi" firstAttribute="leading" secondItem="SK9-DY-fxe" secondAttribute="trailing" constant="5" id="ptc-4U-jKt"/>
+                    <constraint firstItem="nXI-V1-OfM" firstAttribute="leading" secondItem="SK9-DY-fxe" secondAttribute="trailing" constant="5" id="qec-wy-djZ"/>
+                    <constraint firstAttribute="trailing" secondItem="nXI-V1-OfM" secondAttribute="trailing" constant="5" id="rpk-UW-f2Z"/>
+                    <constraint firstItem="4Jo-di-dLi" firstAttribute="top" secondItem="upu-n0-GQh" secondAttribute="bottom" constant="5" id="t7y-fI-Vgs"/>
+                    <constraint firstItem="SK9-DY-fxe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wY2-3J-XR0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="downloadsLabel" destination="4zR-b9-Pqo" id="3Hr-DA-R1b"/>
+                <outlet property="likesLabel" destination="upu-n0-GQh" id="spr-87-GZC"/>
+                <outlet property="thumbnailImageView" destination="SK9-DY-fxe" id="MdB-Mu-mYK"/>
+                <outlet property="userLabel" destination="4Jo-di-dLi" id="Lz4-c2-jaM"/>
+                <outlet property="viewsLabel" destination="nXI-V1-OfM" id="DxQ-xt-6ai"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="118.19196428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -10,10 +10,10 @@ import UIKit
 
 class AppCorrdinator: Coordinator {
     var rootViewController: UIViewController {
-        return menuCoordinator.rootViewController
+        return mainCoordinator.rootViewController
     }
 
-    var menuCoordinator: MainCoordinator! {
+    var mainCoordinator: MainCoordinator! {
         didSet {
             rootViewControllerSwitched()
         }
@@ -21,8 +21,7 @@ class AppCorrdinator: Coordinator {
     var rootViewControllerSwitched: () -> Void = {}
     
     func start() {
-        /// ADD CODE TO INSTANSIATE MAIN CONTROLLER
-        menuCoordinator = MainCoordinator()
+        mainCoordinator = MainCoordinator()
     }
     
 }

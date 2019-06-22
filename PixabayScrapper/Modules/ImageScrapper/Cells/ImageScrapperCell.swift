@@ -25,7 +25,7 @@ class ImageScrapperCell: UICollectionViewCell {
 
     func configureCell(with data: ScrappedImageDto) {
         setupCellAppearance()
-        guard let imageURL = URL(string: data.imageURL) else {return}
+        guard let imageURL = URL(string: data.thumbnailURL) else {return}
         thumbnailImage.contentMode = .scaleAspectFill
         thumbnailImage.kf.setImage(with: imageURL)
     }

@@ -10,6 +10,10 @@
 		8E7B8EE4A083DA5372D96893 /* Pods_PixabayScrapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065BC47DE8350F9B5CDF083E /* Pods_PixabayScrapperTests.framework */; };
 		B17AC921A0A7F36753236161 /* Pods_PixabayScrapperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE6088C20CBA7C686FEA707 /* Pods_PixabayScrapperUITests.framework */; };
 		C58FCCE090C264EF0B87CB70 /* Pods_PixabayScrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF47B6902B165D250694BC /* Pods_PixabayScrapper.framework */; };
+		CE0EB56522B6C54B0039CCD3 /* VideoScrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EB56422B6C54B0039CCD3 /* VideoScrapperView.swift */; };
+		CE0EB56922B6C5820039CCD3 /* VideoScrapperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EB56722B6C5820039CCD3 /* VideoScrapperCell.swift */; };
+		CE0EB56A22B6C5820039CCD3 /* VideoScrapperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EB56822B6C5820039CCD3 /* VideoScrapperCell.xib */; };
+		CE0EB56C22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EB56B22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift */; };
 		CE1C268522AD72B6004FF71D /* ImageScrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C268422AD72B6004FF71D /* ImageScrapperView.swift */; };
 		CE1C268722AD72C9004FF71D /* ImageScrapperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C268622AD72C9004FF71D /* ImageScrapperViewModel.swift */; };
 		CE1C268B22AD745B004FF71D /* ImageScrapperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C268922AD745B004FF71D /* ImageScrapperCell.swift */; };
@@ -19,6 +23,7 @@
 		CE1C269522AD8B7D004FF71D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C269422AD8B7D004FF71D /* RequestManager.swift */; };
 		CE2A80A022B43E9F00863CE9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A809F22B43E9F00863CE9 /* Global.swift */; };
 		CE2A80A222B441BC00863CE9 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A80A122B441BC00863CE9 /* PlaceholderView.swift */; };
+		CE676E3822BE3D5700DA379B /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE676E3722BE3D5700DA379B /* VideoPlayerViewController.swift */; };
 		CE897727227D9A340010F48E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897726227D9A340010F48E /* AppDelegate.swift */; };
 		CE89772E227D9A350010F48E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE89772D227D9A350010F48E /* Assets.xcassets */; };
 		CE897731227D9A350010F48E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE89772F227D9A350010F48E /* LaunchScreen.storyboard */; };
@@ -35,6 +40,9 @@
 		CE897771227DF1760010F48E /* VideoScrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897770227DF1760010F48E /* VideoScrapperViewController.swift */; };
 		CE897773227DF18B0010F48E /* ImageScrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897772227DF18B0010F48E /* ImageScrapperViewController.swift */; };
 		CE968D9E22B2DFAB00FAD597 /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968D9D22B2DFAB00FAD597 /* NetworkingHelper.swift */; };
+		CEA31A0822B590BD00F741AE /* ScrappedVideoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA31A0722B590BD00F741AE /* ScrappedVideoDto.swift */; };
+		CEA31A0A22B5937A00F741AE /* ImageFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA31A0922B5937A00F741AE /* ImageFullViewController.swift */; };
+		CEA31A0C22B5938C00F741AE /* ImageFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA31A0B22B5938C00F741AE /* ImageFullView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +70,10 @@
 		9AE6088C20CBA7C686FEA707 /* Pods_PixabayScrapperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayScrapperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2608A973FDBD480DAA49D8 /* Pods-PixabayScrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayScrapper.debug.xcconfig"; path = "Target Support Files/Pods-PixabayScrapper/Pods-PixabayScrapper.debug.xcconfig"; sourceTree = "<group>"; };
 		C3235D17CFA5EDE2887148E4 /* Pods-PixabayScrapperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayScrapperUITests.release.xcconfig"; path = "Target Support Files/Pods-PixabayScrapperUITests/Pods-PixabayScrapperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE0EB56422B6C54B0039CCD3 /* VideoScrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperView.swift; sourceTree = "<group>"; };
+		CE0EB56722B6C5820039CCD3 /* VideoScrapperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperCell.swift; sourceTree = "<group>"; };
+		CE0EB56822B6C5820039CCD3 /* VideoScrapperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoScrapperCell.xib; sourceTree = "<group>"; };
+		CE0EB56B22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperViewModel.swift; sourceTree = "<group>"; };
 		CE1C268422AD72B6004FF71D /* ImageScrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrapperView.swift; sourceTree = "<group>"; };
 		CE1C268622AD72C9004FF71D /* ImageScrapperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrapperViewModel.swift; sourceTree = "<group>"; };
 		CE1C268922AD745B004FF71D /* ImageScrapperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrapperCell.swift; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		CE1C269422AD8B7D004FF71D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE2A809F22B43E9F00863CE9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		CE2A80A122B441BC00863CE9 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		CE676E3722BE3D5700DA379B /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		CE897723227D9A340010F48E /* PixabayScrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayScrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE897726227D9A340010F48E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE89772D227D9A350010F48E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +106,9 @@
 		CE897770227DF1760010F48E /* VideoScrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperViewController.swift; sourceTree = "<group>"; };
 		CE897772227DF18B0010F48E /* ImageScrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrapperViewController.swift; sourceTree = "<group>"; };
 		CE968D9D22B2DFAB00FAD597 /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		CEA31A0722B590BD00F741AE /* ScrappedVideoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrappedVideoDto.swift; sourceTree = "<group>"; };
+		CEA31A0922B5937A00F741AE /* ImageFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFullViewController.swift; sourceTree = "<group>"; };
+		CEA31A0B22B5938C00F741AE /* ImageFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFullView.swift; sourceTree = "<group>"; };
 		E0DF47B6902B165D250694BC /* Pods_PixabayScrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayScrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F9A9AAD1BC65A770ECE22 /* Pods-PixabayScrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayScrapper.release.xcconfig"; path = "Target Support Files/Pods-PixabayScrapper/Pods-PixabayScrapper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +162,15 @@
 				9AE6088C20CBA7C686FEA707 /* Pods_PixabayScrapperUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0EB56622B6C5630039CCD3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EB56722B6C5820039CCD3 /* VideoScrapperCell.swift */,
+				CE0EB56822B6C5820039CCD3 /* VideoScrapperCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CE1C268822AD7436004FF71D /* Cells */ = {
@@ -239,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1C268F22AD8722004FF71D /* ScrappedImageDto.swift */,
+				CEA31A0722B590BD00F741AE /* ScrappedVideoDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,9 +294,10 @@
 		CE897758227DC14E0010F48E /* VideoScrapper */ = {
 			isa = PBXGroup;
 			children = (
+				CE0EB56622B6C5630039CCD3 /* Cells */,
 				CE89775E227DC1790010F48E /* Controller */,
-				CE89775D227DC1730010F48E /* ViewModel */,
 				CE89775C227DC16D0010F48E /* View */,
+				CE89775D227DC1730010F48E /* ViewModel */,
 			);
 			path = VideoScrapper;
 			sourceTree = "<group>";
@@ -279,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1C268422AD72B6004FF71D /* ImageScrapperView.swift */,
+				CEA31A0B22B5938C00F741AE /* ImageFullView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				CE897772227DF18B0010F48E /* ImageScrapperViewController.swift */,
+				CEA31A0922B5937A00F741AE /* ImageFullViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +331,7 @@
 		CE89775C227DC16D0010F48E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE0EB56422B6C54B0039CCD3 /* VideoScrapperView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +339,7 @@
 		CE89775D227DC1730010F48E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE0EB56B22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				CE897770227DF1760010F48E /* VideoScrapperViewController.swift */,
+				CE676E3722BE3D5700DA379B /* VideoPlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE897731227D9A350010F48E /* LaunchScreen.storyboard in Resources */,
+				CE0EB56A22B6C5820039CCD3 /* VideoScrapperCell.xib in Resources */,
 				CE1C268C22AD745B004FF71D /* ImageScrapperCell.xib in Resources */,
 				CE89772E227D9A350010F48E /* Assets.xcassets in Resources */,
 			);
@@ -569,20 +602,27 @@
 			files = (
 				CE1C269522AD8B7D004FF71D /* RequestManager.swift in Sources */,
 				CE1C269322AD8B71004FF71D /* RequestManagerCore.swift in Sources */,
+				CE0EB56922B6C5820039CCD3 /* VideoScrapperCell.swift in Sources */,
+				CE676E3822BE3D5700DA379B /* VideoPlayerViewController.swift in Sources */,
+				CEA31A0822B590BD00F741AE /* ScrappedVideoDto.swift in Sources */,
 				CE89776D227DDB200010F48E /* ImageScrapperCoordinator.swift in Sources */,
 				CE968D9E22B2DFAB00FAD597 /* NetworkingHelper.swift in Sources */,
 				CE2A80A022B43E9F00863CE9 /* Global.swift in Sources */,
 				CE89776F227DDB2B0010F48E /* VideoScrapperCoordinator.swift in Sources */,
+				CEA31A0C22B5938C00F741AE /* ImageFullView.swift in Sources */,
 				CE897760227DC30E0010F48E /* Coordinator.swift in Sources */,
 				CE89776B227DDB130010F48E /* MainCoordinator.swift in Sources */,
 				CE1C268722AD72C9004FF71D /* ImageScrapperViewModel.swift in Sources */,
+				CE0EB56C22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift in Sources */,
 				CE1C268522AD72B6004FF71D /* ImageScrapperView.swift in Sources */,
+				CE0EB56522B6C54B0039CCD3 /* VideoScrapperView.swift in Sources */,
 				CE897762227DC4120010F48E /* AppCorrdinator.swift in Sources */,
 				CE897727227D9A340010F48E /* AppDelegate.swift in Sources */,
 				CE897767227DC9600010F48E /* MainView.swift in Sources */,
 				CE897765227DC8F80010F48E /* MainViewController.swift in Sources */,
 				CE897771227DF1760010F48E /* VideoScrapperViewController.swift in Sources */,
 				CE1C269022AD8722004FF71D /* ScrappedImageDto.swift in Sources */,
+				CEA31A0A22B5937A00F741AE /* ImageFullViewController.swift in Sources */,
 				CE897773227DF18B0010F48E /* ImageScrapperViewController.swift in Sources */,
 				CE897769227DD5FD0010F48E /* MainViewModel.swift in Sources */,
 				CE2A80A222B441BC00863CE9 /* PlaceholderView.swift in Sources */,

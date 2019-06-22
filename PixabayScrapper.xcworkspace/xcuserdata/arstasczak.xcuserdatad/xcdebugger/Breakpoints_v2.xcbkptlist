@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PixabayScrapper/Networking/RequestManager.swift"
-            timestampString = "582241968.980762"
+            timestampString = "582755195.489957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkName = "getPhotos(query:page:closure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PixabayScrapper/Networking/RequestManager.swift"
-            timestampString = "582241968.980873"
+            timestampString = "582755195.490123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkName = "getPhotos(query:page:closure:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PixabayScrapper/Networking/RequestManager.swift"
-            timestampString = "582241968.981047"
+            timestampString = "582755195.490283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkName = "getPhotos(query:page:closure:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -202,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PixabayScrapper/Networking/RequestManager.swift"
-            timestampString = "582241968.981126"
+            timestampString = "582755195.49036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "getPhotosForKey(query:page:closure:)"
+            landmarkName = "getPhotos(query:page:closure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -257,6 +257,38 @@
                   offsetFromSymbolStart = "157">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Modules/ImageScrapper/Controller/ImageScrapperViewController.swift"
+            timestampString = "582755195.490456"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PixabayScrapper/Modules/ImageScrapper/Controller/ImageScrapperViewController.swift"
+            timestampString = "582755195.490528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -20,7 +20,7 @@ class ImageScrapperView: PlaceholderView {
         collectionFlowLayout.minimumLineSpacing = 0.0
         collectionFlowLayout.minimumInteritemSpacing = 0.0
         let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: collectionFlowLayout)
-        collectionView.allowsSelection = false
+        collectionView.allowsSelection = true
         collectionView.backgroundColor = .lightGray
         return collectionView
     }()

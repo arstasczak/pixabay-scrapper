@@ -29,7 +29,7 @@ class PlaceholderView: UIView {
     
     func setup() {
         self.addSubview(placeholder)
-        placeholder.backgroundColor = SECNAVBARCOLOR
+        placeholder.backgroundColor = SECCOLOR
         placeholder.snp.makeConstraints { (cm) in
             cm.leading.trailing.top.bottom.equalToSuperview()
         }

@@ -16,6 +16,8 @@ class ImageScrapperViewController: UIViewController {
     private var pageNumber: Int = 1
     private var searchQuery: String = ""
     
+    var imageSelected: ((String) -> Void)?
+    
     var scrappedImages: [ScrappedImageDto] = [] {
         didSet {
             collectionView?.reloadData()
@@ -35,8 +37,11 @@ class ImageScrapperViewController: UIViewController {
         let searchBarView = imageScrapperViewModel.view.searchBar
         searchBarView.delegate = self
         searchBar = searchBarView
+        searchBar?.snp.makeConstraints({ (cm) in
+            cm.height.equalTo(44)
+        })
         navigationItem.titleView = searchBarView
-
+        extendedLayoutIncludesOpaqueBars = true
         
         let collectionView = imageScrapperViewModel.view.collectionView
         collectionView.delegate = self
@@ -44,6 +49,10 @@ class ImageScrapperViewController: UIViewController {
         let cellNib = UINib(nibName: "ImageScrapperCell", bundle: Bundle.main)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "imageCell")
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.reloadData()
     }
     
     init() {
@@ -56,7 +65,7 @@ class ImageScrapperViewController: UIViewController {
     }
     
     func getImages(query: String, pageNumber: Int) {
-        RequestManager.shared.getPhotosForKey(query: query, page: pageNumber) { [weak self] (scrappedImages) in
+        RequestManager.shared.getPhotos(query: query, page: pageNumber) { [weak self] (scrappedImages) in
             self?.scrappedImages.append(contentsOf: scrappedImages)
         }
     }
@@ -95,5 +104,10 @@ extension ImageScrapperViewController: UICollectionViewDelegate, UICollectionVie
             pageNumber += 1
             getImages(query: searchQuery, pageNumber: pageNumber)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedItem = scrappedImages[indexPath.row]
+        imageSelected?(selectedItem.imageURL)
     }
 }

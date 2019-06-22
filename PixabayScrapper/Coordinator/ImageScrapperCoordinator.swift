@@ -14,8 +14,15 @@ class ImageScrapperCoordinator: Coordinator {
     
     init() {
         let imageScrapperController = ImageScrapperViewController()
-        self.rootViewController = imageScrapperController
+        rootViewController = imageScrapperController
+        imageScrapperController.imageSelected = { [weak self] imageURL in
+            self?.goToFullImageView(imageUrl: imageURL)
+        }
         rootViewController.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    func goToFullImageView(imageUrl: String) {
+        let fullImageViewController = ImageFullViewController(imageUrl: imageUrl)
+        rootViewController.navigationController?.pushViewController(fullImageViewController, animated: true)
+    }
 }

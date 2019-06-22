@@ -17,8 +17,8 @@ class ScrappedImageDto: NSObject {
     var numberOfLikes: Int = 0
     
     init(with json: JSON) {
-        self.imageURL = json["previewURL"].stringValue
-        self.thumbnailURL = json["imageURL"].stringValue
+        self.imageURL = json["largeImageURL"].stringValue
+        self.thumbnailURL = json["previewURL"].stringValue
         self.downloads = json[""].intValue
         self.numberOfViews = json[""].intValue
         self.numberOfLikes = json[""].intValue
