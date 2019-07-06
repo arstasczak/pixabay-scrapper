@@ -20,6 +20,7 @@ class VideoScrapperViewController: UIViewController {
     private var scrappedVideos: [ScrappedVideoDto] = [] {
         didSet {
             DispatchQueue.main.async {
+                self.videoScrapperViewModel.view.placeholder.isHidden = true
                 self.tableView?.reloadData()
             }
         }

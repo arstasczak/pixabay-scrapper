@@ -7,56 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ImageScrapperViewController: UIViewController {
 
-    let imageScrapperViewModel: ImageScrapperViewModel
-    private var collectionView: UICollectionView?
-    private var searchBar: UISearchBar?
-    private var pageNumber: Int = 1
-    private var searchQuery: String = ""
-    
-    var imageSelected: ((String) -> Void)?
-    
-    var scrappedImages: [ScrappedImageDto] = [] {
-        didSet {
-            collectionView?.reloadData()
-            imageScrapperViewModel.view.placeholder.isHidden = true
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.addSubview(imageScrapperViewModel.view)
-        imageScrapperViewModel.view.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.snp_topMargin)
-            make.leading.trailing.bottom.equalToSuperview()
-        }
-        collectionView = imageScrapperViewModel.view.collectionView
-        
-        let searchBarView = imageScrapperViewModel.view.searchBar
-        searchBarView.delegate = self
-        searchBar = searchBarView
-        searchBar?.snp.makeConstraints({ (cm) in
-            cm.height.equalTo(44)
-        })
-        navigationItem.titleView = searchBarView
-        extendedLayoutIncludesOpaqueBars = true
-        
-        let collectionView = imageScrapperViewModel.view.collectionView
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        let cellNib = UINib(nibName: "ImageScrapperCell", bundle: Bundle.main)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: "imageCell")
+    private let imageScrapperViewModel: ImageScrapperViewModel
+    private let imageScrapperView: ImageScrapperView
 
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        collectionView?.reloadData()
-    }
+    private var searchQuery = BehaviorRelay<String>(value: "")
+    private var pageNumber =  BehaviorRelay<Int>(value: 1)
+    private var scrappedImages = BehaviorRelay<[ScrappedImageDto]>(value: [])
+    private let disposeBag = DisposeBag()
+
+    var imageSelected: ((String) -> Void)?
+
+    // MARK: - Initial methods
     
     init() {
-        self.imageScrapperViewModel = ImageScrapperViewModel(imageScrapperView: ImageScrapperView())
+        self.imageScrapperViewModel = ImageScrapperViewModel()
+        self.imageScrapperView = ImageScrapperView(viewModel: imageScrapperViewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -64,9 +34,61 @@ class ImageScrapperViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func getImages(query: String, pageNumber: Int) {
-        RequestManager.shared.getPhotos(query: query, page: pageNumber) { [weak self] (scrappedImages) in
-            self?.scrappedImages.append(contentsOf: scrappedImages)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        observeProperties()
+        createView()
+    }
+    
+    // MARK: - Private methods
+
+    private func observeProperties() {
+        pageNumber.subscribe(onNext: { [weak self] (pageNumber) in
+            guard let `self` = self else { return }
+            self.getImages(query: self.searchQuery.value, pageNumber: pageNumber)
+        })
+        .disposed(by: disposeBag)
+        
+        searchQuery.subscribe(onNext: { [weak self] (query) in
+            guard let `self` = self else { return }
+            self.getImages(query: query, pageNumber: self.pageNumber.value)
+        })
+        .disposed(by: disposeBag)
+        
+        scrappedImages.asObservable().subscribe(onNext: { [weak self] _ in
+            guard let `self` = self else { return }
+            self.imageScrapperView.collectionView.reloadData()
+            self.updateUI()
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    private func createView() {
+        view.addSubview(imageScrapperView)
+        imageScrapperView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.snp_topMargin)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
+
+        imageScrapperView.collectionView.delegate = self
+        imageScrapperView.collectionView.dataSource = self
+
+        imageScrapperView.searchBar.delegate = self
+        imageScrapperView.searchBar.snp.makeConstraints({ (cm) in
+            cm.height.equalTo(44)
+        })
+        navigationItem.titleView = imageScrapperView.searchBar
+        extendedLayoutIncludesOpaqueBars = true
+    }
+    
+    private func updateUI() {
+        imageScrapperView.placeholder.isHidden = scrappedImages.value.count > 0
+    }
+    
+    private func getImages(query: String, pageNumber: Int) {
+        RequestManager.shared.getPhotos(query: query, page: pageNumber) { [weak self] (images) in
+            guard let `self` = self else { return }
+            self.scrappedImages.accept(self.scrappedImages.value + images)
         }
     }
 }
@@ -74,22 +96,20 @@ class ImageScrapperViewController: UIViewController {
 extension ImageScrapperViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        scrappedImages.removeAll()
-        if let searchBarText = searchBar.text, !searchBarText.isEmpty {
-            searchQuery = searchBarText
-            getImages(query: searchQuery, pageNumber: pageNumber)
-        }
+        scrappedImages.accept([])
+        guard let searchBarText = searchBar.text else { return }
+        searchQuery.accept(searchBarText)
     }
 }
 
 extension ImageScrapperViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return scrappedImages.count
+        return scrappedImages.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as? ImageScrapperCell else {return UICollectionViewCell()}
-        cell.configureCell(with: scrappedImages[indexPath.row])
+        cell.configureCell(with: scrappedImages.value[indexPath.row])
         return cell
     }
     
@@ -100,14 +120,13 @@ extension ImageScrapperViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == scrappedImages.count-1 {
-            pageNumber += 1
-            getImages(query: searchQuery, pageNumber: pageNumber)
+        if indexPath.row == scrappedImages.value.count-1 {
+            pageNumber.accept(pageNumber.value + 1)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItem = scrappedImages[indexPath.row]
+        let selectedItem = scrappedImages.value[indexPath.row]
         imageSelected?(selectedItem.imageURL)
     }
 }

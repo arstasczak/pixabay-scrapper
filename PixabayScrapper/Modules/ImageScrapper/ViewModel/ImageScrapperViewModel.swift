@@ -11,11 +11,6 @@ import RxCocoa
 import RxSwift
 
 class ImageScrapperViewModel: NSObject {
-    private var disposeBag = DisposeBag()
-    let view: ImageScrapperView
-    
-    init(imageScrapperView: ImageScrapperView) {
-        imageScrapperView.setup()
-        self.view = imageScrapperView
-    }
 }
+
+

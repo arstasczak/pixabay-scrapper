@@ -16,14 +16,11 @@ class ImageFullView: UIView {
         return imageView
     }()
     
-    func setup(imageURL: String) {
+    func setup() {
         self.backgroundColor = SECCOLOR
         self.addSubview(imageView)
         imageView.snp.makeConstraints { (cm) in
             cm.bottom.top.leading.trailing.equalToSuperview()
         }
-        
-        guard let imageURL = URL(string: imageURL) else {return}
-        imageView.kf.setImage(with: imageURL)
     }
 }

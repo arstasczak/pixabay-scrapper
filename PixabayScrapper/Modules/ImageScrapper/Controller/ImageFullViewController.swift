@@ -15,15 +15,24 @@ class ImageFullViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        createView()
+    }
+    
+    func createView() {
         let fullImageView = ImageFullView()
-        fullImageView.setup(imageURL: selectedImageURL)
-        view.backgroundColor = SECCOLOR
-        title = "Image Full Screen"
+        fullImageView.setup()
+        guard let imageURL = URL(string: selectedImageURL) else {return}
+        fullImageView.imageView.kf.indicatorType = .activity
+        fullImageView.imageView.kf.setImage(with: imageURL)
         self.view.addSubview(fullImageView)
+        
         fullImageView.snp.makeConstraints { (cm) in
             cm.top.equalTo(self.view.snp_topMargin)
             cm.bottom.leading.trailing.equalToSuperview()
         }
+        
+        view.backgroundColor = SECCOLOR
+        title = "Image Full Screen"
     }
     
     init(imageUrl: String) {

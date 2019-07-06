@@ -11,7 +11,19 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class ImageScrapperView: PlaceholderView {
+final class ImageScrapperView: PlaceholderView {
+    
+    private var viewModel: ImageScrapperViewModel
+    
+    init(viewModel: ImageScrapperViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: CGRect.zero)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     let collectionView: UICollectionView = {
         
@@ -22,6 +34,10 @@ class ImageScrapperView: PlaceholderView {
         let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: collectionFlowLayout)
         collectionView.allowsSelection = true
         collectionView.backgroundColor = .lightGray
+        
+        let cellNib = UINib(nibName: "ImageScrapperCell", bundle: Bundle.main)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: "imageCell")
+
         return collectionView
     }()
     

@@ -13,6 +13,7 @@ class VideoScrapperView: PlaceholderView {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.allowsMultipleSelection = false
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     
@@ -36,5 +37,6 @@ class VideoScrapperView: PlaceholderView {
         tableView.snp.makeConstraints { (cm) in
             cm.top.bottom.leading.trailing.equalToSuperview()
         }
+        self.bringSubviewToFront(placeholder)
     }
 }
