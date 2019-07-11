@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-class VideoScrapperCoordinator: Coordinator {
-    var rootViewController: UIViewController
-
-    init() {
-        let videoScrapperController = VideoScrapperViewController()
-        self.rootViewController = videoScrapperController
-        rootViewController.navigationController?.setNavigationBarHidden(false, animated: true)
+class VideoScrapperCoordinator: SubCoordinator {
+    func goToVideoScrapper() {
+        let vc = VideoScrapperViewController(dependencies: dependencies)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

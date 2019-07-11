@@ -12,7 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private var appCoordinator: AppCorrdinator?
+    
+    private let dependencies = Dependencies()
+    private var coordinator: MainCoordinator? {
+        didSet {
+            dependencies.coordinator = coordinator
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -22,18 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white ]
         UINavigationBar.appearance().isTranslucent = false
 
-        appCoordinator = AppCorrdinator()
         window = UIWindow(frame: UIScreen.main.bounds)
         
-
-        appCoordinator?.rootViewControllerSwitched = { [weak self, weak appCoordinator] in
-            guard let strongSelf = self, let coordinator = appCoordinator else {return}
-            strongSelf.window?.rootViewController = coordinator.rootViewController
-            strongSelf.window?.makeKeyAndVisible()
+        setWindow(navigationBarHidden: false) { [weak self] in
+            self?.dependencies.coordinator.main()
         }
         
-        appCoordinator?.start()
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    private func setWindow(navigationBarHidden: Bool, closure: @escaping () -> Void) {
+        let navVC = UINavigationController()
+        navVC.setNavigationBarHidden(navigationBarHidden, animated: true)
+        coordinator = MainCoordinator(navigationController: navVC, dependencies: dependencies)
+        closure()
+        window?.rootViewController = navVC
     }
     
 

@@ -10,12 +10,5 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class VideoScrapperViewModel: NSObject {
-    private var disposeBag = DisposeBag()
-    let view: VideoScrapperView
-    
-    init(videoScrapperView: VideoScrapperView) {
-        videoScrapperView.setup()
-        self.view = videoScrapperView
-    }
+class VideoScrapperViewModel: HasDependencies {
 }

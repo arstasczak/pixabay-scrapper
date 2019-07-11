@@ -10,10 +10,24 @@ import UIKit
 
 class VideoScrapperView: PlaceholderView {
     
+    private var viewModel: VideoScrapperViewModel
+
+    init(viewModel: VideoScrapperViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: CGRect.zero)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.allowsMultipleSelection = false
         tableView.tableFooterView = UIView()
+        let cellNib = UINib(nibName: "VideoScrapperCell", bundle: Bundle.main)
+        tableView.register(cellNib, forCellReuseIdentifier: "videoScrapperCell")
         return tableView
     }()
     

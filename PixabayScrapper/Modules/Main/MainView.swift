@@ -37,9 +37,17 @@ class MainView: UIView {
         self.backgroundColor = UIColor(red: 235, green: 235, blue: 235, alpha: 1)
         createTilesView()
     }
-
+    
+    init() {
+        super.init(frame: CGRect.zero)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func createTilesView() {
-
         self.addSubview(imageButton)
         imageButton.snp.makeConstraints { (make) in
             make.height.equalTo(150)

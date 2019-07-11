@@ -62,5 +62,8 @@ final class ImageScrapperView: PlaceholderView {
             cm.leading.trailing.bottom.top.equalToSuperview()
         }
         self.bringSubviewToFront(placeholder)
+        
+        collectionView.delegate = viewModel
+        collectionView.dataSource = viewModel
     }
 }

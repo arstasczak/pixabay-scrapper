@@ -9,20 +9,25 @@
 import Foundation
 import UIKit
 
-class ImageScrapperCoordinator: Coordinator {
-    var rootViewController: UIViewController
+class ImageScrapperCoordinator: SubCoordinator {
     
-    init() {
-        let imageScrapperController = ImageScrapperViewController()
-        rootViewController = imageScrapperController
-        imageScrapperController.imageSelected = { [weak self] imageURL in
-            self?.goToFullImageView(imageUrl: imageURL)
-        }
-        rootViewController.navigationController?.setNavigationBarHidden(false, animated: true)
+    var fullImageCoordinator: FullImageViewCoordinator
+    
+    required override init(navigationController: UINavigationController, dependencies: Dependencies) {
+        fullImageCoordinator = FullImageViewCoordinator(navigationController: navigationController, dependencies: dependencies)
+        super.init(navigationController: navigationController, dependencies: dependencies)
+    }
+    
+    func goToImageScrapper() {
+        let vc = ImageScrapperViewController(dependencies: dependencies)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func goToFullImageView(imageUrl: String) {
         let fullImageViewController = ImageFullViewController(imageUrl: imageUrl)
-        rootViewController.navigationController?.pushViewController(fullImageViewController, animated: true)
+        if navigationController.viewControllers.last is ImageFullViewController {
+            navigationController.viewControllers.removeLast()
+        }
+        navigationController.pushViewController(fullImageViewController, animated: true)
     }
 }

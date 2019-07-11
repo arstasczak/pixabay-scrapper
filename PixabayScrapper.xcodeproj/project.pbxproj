@@ -23,17 +23,18 @@
 		CE1C269522AD8B7D004FF71D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C269422AD8B7D004FF71D /* RequestManager.swift */; };
 		CE2A80A022B43E9F00863CE9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A809F22B43E9F00863CE9 /* Global.swift */; };
 		CE2A80A222B441BC00863CE9 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A80A122B441BC00863CE9 /* PlaceholderView.swift */; };
+		CE36EE6C22D7BC8A0081AA2C /* SubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36EE6B22D7BC8A0081AA2C /* SubCoordinator.swift */; };
+		CE36EE6E22D7BD1A0081AA2C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36EE6D22D7BD1A0081AA2C /* MainCoordinator.swift */; };
+		CE36EE7022D7C0160081AA2C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36EE6F22D7C0160081AA2C /* Dependencies.swift */; };
+		CE36EE7222D7CD3D0081AA2C /* FullImageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36EE7122D7CD3D0081AA2C /* FullImageViewCoordinator.swift */; };
 		CE897727227D9A340010F48E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897726227D9A340010F48E /* AppDelegate.swift */; };
 		CE89772E227D9A350010F48E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE89772D227D9A350010F48E /* Assets.xcassets */; };
 		CE897731227D9A350010F48E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE89772F227D9A350010F48E /* LaunchScreen.storyboard */; };
 		CE89773C227D9A360010F48E /* PixabayScrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89773B227D9A360010F48E /* PixabayScrapperTests.swift */; };
 		CE897747227D9A360010F48E /* PixabayScrapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897746227D9A360010F48E /* PixabayScrapperUITests.swift */; };
-		CE897760227DC30E0010F48E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89775F227DC30E0010F48E /* Coordinator.swift */; };
-		CE897762227DC4120010F48E /* AppCorrdinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897761227DC4120010F48E /* AppCorrdinator.swift */; };
 		CE897765227DC8F80010F48E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897764227DC8F80010F48E /* MainViewController.swift */; };
 		CE897767227DC9600010F48E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897766227DC9600010F48E /* MainView.swift */; };
 		CE897769227DD5FD0010F48E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897768227DD5FD0010F48E /* MainViewModel.swift */; };
-		CE89776B227DDB130010F48E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89776A227DDB130010F48E /* MainCoordinator.swift */; };
 		CE89776D227DDB200010F48E /* ImageScrapperCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89776C227DDB200010F48E /* ImageScrapperCoordinator.swift */; };
 		CE89776F227DDB2B0010F48E /* VideoScrapperCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89776E227DDB2B0010F48E /* VideoScrapperCoordinator.swift */; };
 		CE897771227DF1760010F48E /* VideoScrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE897770227DF1760010F48E /* VideoScrapperViewController.swift */; };
@@ -82,6 +83,10 @@
 		CE1C269422AD8B7D004FF71D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE2A809F22B43E9F00863CE9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		CE2A80A122B441BC00863CE9 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		CE36EE6B22D7BC8A0081AA2C /* SubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCoordinator.swift; sourceTree = "<group>"; };
+		CE36EE6D22D7BD1A0081AA2C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		CE36EE6F22D7C0160081AA2C /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		CE36EE7122D7CD3D0081AA2C /* FullImageViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewCoordinator.swift; sourceTree = "<group>"; };
 		CE897723227D9A340010F48E /* PixabayScrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayScrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE897726227D9A340010F48E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE89772D227D9A350010F48E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,12 +98,9 @@
 		CE897742227D9A360010F48E /* PixabayScrapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayScrapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE897746227D9A360010F48E /* PixabayScrapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayScrapperUITests.swift; sourceTree = "<group>"; };
 		CE897748227D9A360010F48E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE89775F227DC30E0010F48E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CE897761227DC4120010F48E /* AppCorrdinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCorrdinator.swift; sourceTree = "<group>"; };
 		CE897764227DC8F80010F48E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE897766227DC9600010F48E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CE897768227DD5FD0010F48E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		CE89776A227DDB130010F48E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CE89776C227DDB200010F48E /* ImageScrapperCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrapperCoordinator.swift; sourceTree = "<group>"; };
 		CE89776E227DDB2B0010F48E /* VideoScrapperCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperCoordinator.swift; sourceTree = "<group>"; };
 		CE897770227DF1760010F48E /* VideoScrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScrapperViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				CE897754227DC12A0010F48E /* Coordinator */,
 				CE897726227D9A340010F48E /* AppDelegate.swift */,
 				CE89772D227D9A350010F48E /* Assets.xcassets */,
+				CE36EE6F22D7C0160081AA2C /* Dependencies.swift */,
 				CE89772F227D9A350010F48E /* LaunchScreen.storyboard */,
 				CE897732227D9A360010F48E /* Info.plist */,
 				CE2A809F22B43E9F00863CE9 /* Global.swift */,
@@ -249,11 +252,11 @@
 		CE897754227DC12A0010F48E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				CE89775F227DC30E0010F48E /* Coordinator.swift */,
-				CE897761227DC4120010F48E /* AppCorrdinator.swift */,
-				CE89776A227DDB130010F48E /* MainCoordinator.swift */,
 				CE89776C227DDB200010F48E /* ImageScrapperCoordinator.swift */,
 				CE89776E227DDB2B0010F48E /* VideoScrapperCoordinator.swift */,
+				CE36EE6B22D7BC8A0081AA2C /* SubCoordinator.swift */,
+				CE36EE6D22D7BD1A0081AA2C /* MainCoordinator.swift */,
+				CE36EE7122D7CD3D0081AA2C /* FullImageViewCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -606,15 +609,15 @@
 				CE2A80A022B43E9F00863CE9 /* Global.swift in Sources */,
 				CE89776F227DDB2B0010F48E /* VideoScrapperCoordinator.swift in Sources */,
 				CEA31A0C22B5938C00F741AE /* ImageFullView.swift in Sources */,
-				CE897760227DC30E0010F48E /* Coordinator.swift in Sources */,
-				CE89776B227DDB130010F48E /* MainCoordinator.swift in Sources */,
 				CE1C268722AD72C9004FF71D /* ImageScrapperViewModel.swift in Sources */,
 				CE0EB56C22B6C8AE0039CCD3 /* VideoScrapperViewModel.swift in Sources */,
 				CE1C268522AD72B6004FF71D /* ImageScrapperView.swift in Sources */,
 				CE0EB56522B6C54B0039CCD3 /* VideoScrapperView.swift in Sources */,
-				CE897762227DC4120010F48E /* AppCorrdinator.swift in Sources */,
 				CE897727227D9A340010F48E /* AppDelegate.swift in Sources */,
+				CE36EE7222D7CD3D0081AA2C /* FullImageViewCoordinator.swift in Sources */,
+				CE36EE6C22D7BC8A0081AA2C /* SubCoordinator.swift in Sources */,
 				CE897767227DC9600010F48E /* MainView.swift in Sources */,
+				CE36EE7022D7C0160081AA2C /* Dependencies.swift in Sources */,
 				CE897765227DC8F80010F48E /* MainViewController.swift in Sources */,
 				CE897771227DF1760010F48E /* VideoScrapperViewController.swift in Sources */,
 				CE1C269022AD8722004FF71D /* ScrappedImageDto.swift in Sources */,
@@ -622,6 +625,7 @@
 				CE897773227DF18B0010F48E /* ImageScrapperViewController.swift in Sources */,
 				CE897769227DD5FD0010F48E /* MainViewModel.swift in Sources */,
 				CE2A80A222B441BC00863CE9 /* PlaceholderView.swift in Sources */,
+				CE36EE6E22D7BD1A0081AA2C /* MainCoordinator.swift in Sources */,
 				CE1C268B22AD745B004FF71D /* ImageScrapperCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
